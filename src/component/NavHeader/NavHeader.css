@@ -1,0 +1,36 @@
+.navFixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    margin-top: 0;
+    height: 80px;
+    z-index: 100;
+    transition: 0.5s;
+}
+.navFixed  .logo{
+    font-weight: 600;
+    font-size: 20;
+}
+.navFixed .ul{
+    display: flex;
+    justify-content: end ;
+    align-items:center;
+    flex-grow : 1 ; 
+}
+.navFixed a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color:black;
+    font-size: 18px;
+    padding: 10px 15px;
+    font-family: 'Jost', sans-serif;
+    transition: 0.5s;
+}
+.navFixed a:hover{
+    color: #E95095;
+}
+
+.move{
+   height: 60px;
+}
