@@ -1,10 +1,10 @@
 .navFixed {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
+    height: 80px;
     background-color: white;
     margin-top: 0;
-    height: 80px;
     z-index: 100;
     transition: 0.5s;
 }
@@ -17,6 +17,7 @@
     justify-content: end ;
     align-items:center;
     flex-grow : 1 ; 
+    background-color: white;
 }
 .navFixed a{
     text-decoration: none;
@@ -33,4 +34,13 @@
 
 .move{
    height: 60px;
+}
+
+@media (max-width:992px) {
+    .navFixed {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left : 0;
+    }
 }

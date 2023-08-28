@@ -1,25 +1,33 @@
-body {
+* {
   font-family: "Jost", sans-serif;
 }
-.Home {
-  height: 100vh;
+.mainProject{
+  overflow-x: hidden;
+}
+.Header {
+ min-height: 100vh;
+  width: 100vw;
+  margin: 80px 0;
+}
+.Header .landing {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Header .homeimgs {
   width: 100%;
 }
-.Home .landing {
-  height: 100vh;
-  align-items: center;
-  margin-top: 40px;
-}
 
-.Home .homeimgs {
-  width: 110%;
-}
-
-.Home .headWord h1 {
+.Header .headWord h1 {
   font-weight: 600;
   margin: 10px 0;
 }
-.Home .info .star {
+.Header .info{
+  margin-bottom: 40px;
+}
+.Header .info .star {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -27,7 +35,7 @@ body {
   color: #e95095;
   margin: 10px 0;
 }
-.Home .info .star p {
+.Header .info .star p {
   color: black;
   font-size: 18px;
   margin: 0;
@@ -36,48 +44,51 @@ body {
   display: flex;
   align-items: center;
   margin: 10px 0;
+  font-Size: 45px;
 }
 .TypeAnimation h1 {
   margin: 0;
   font-weight: 600;
 }
-.Home .buttons {
+.Header .buttons {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.Home .buttons .btn {
+.Header .buttons .btn {
   border: none;
   text-transform: uppercase;
   border-radius: 40px;
   padding: 10px 25px;
-  font-size: 16;
+  font-size: 16px;
   font-weight: 600;
   transition: 0.3s;
 }
-.Home .buttons .btnBuild {
+.Header .buttons .btnBuild {
   background-color: #e95095;
   color: white;
 }
-.Home .buttons .btnTest {
+.Header .buttons .btnTest {
   background-color: #dedede;
   color: black;
 }
-.Home .buttons .btn:hover {
+.Header .buttons .btn:hover {
   background-color: blueviolet;
   color: white;
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.462);
 }
-.Home .number {
+.Header .number {
   margin-top: 20px;
 }
-.Home .number .num {
+.Header .number .num {
   width: fit-content;
   margin-right: 20px;
 }
 /* ***** build Everything ***** */
 .Build {
-  margin: 30px 0 100px 0;
+  margin-bottom: 80px;
+  width: 100vw;
+  min-height: 100vh;
 }
 
 .Build .head {
@@ -94,7 +105,7 @@ body {
   width: 100%;
 }
 .Build ul li {
-  height: 60px;
+  height: 50px;
   width: 100%;
   margin-bottom: 5px;
   transition: 0.5s;
@@ -109,7 +120,7 @@ body {
   text-decoration: none;
   font-size: 18;
   font-weight: 600;
- 
+
   transition: 0.5s;
 }
 .Build ul li:hover {
@@ -119,14 +130,17 @@ body {
   color: black;
 }
 .activenow {
-    background-color: #dededef6;
-    color: black;
-  }
-.Noactivenow{
-    color: #e95095;
-    background-color: "white";
+  background-color: #dededef6;
+  color: black;
 }
-
+.Noactivenow {
+  color: #e95095;
+  background-color: "white";
+}
+.headLanding{
+  margin-bottom: 50px;
+  height: 70vh;
+}
 .headLanding .showing {
   position: relative;
   border-radius: 10px;
@@ -140,46 +154,132 @@ body {
   width: 100%;
   height: 100%;
 }
-.showing .keyone{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.showing .keyone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 /* ***** End build Everything ***** */
 /* ***** Start Creators build  ***** */
-.creators{
-    margin: 30px 0 100px 0;
-    text-align: center;
+.creators {
+  margin-bottom: 80px;
+  text-align: center;
+  width: 100vw;
+  min-height: 100vh;
 }
-.creators h1{
-    font-weight: 600;
-    margin-bottom: 50px;
+.creators h1 {
+  font-weight: 600;
+  margin-bottom: 50px;
 }
 .creators .row {
-    width: 1000px;
-    margin: 0 auto;
+  margin-left: 150px;
+  margin-right: 150px;
 }
-.creators .card{
-    width: 310px;
-    height: 400px;
-    padding: 35px;
-    border: none;
-    box-shadow: 0px 0px 30px #00000028;
+.creators .card {
+  width: 250px;
+  height: 400px;
+  padding: 35px;
+  border: none;
+  box-shadow: 0px 0px 30px #00000028;
 }
-.creators .card  p{
-    margin: 0;
-    font-size: 16px;
+.creators .card p {
+  margin: 0;
+  font-size: 16px;
 }
-.creators .card .cardimg{
-    margin: 0 auto;
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
+.creators .card .cardimg {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
 }
 /* ***** End Creators build  ***** */
 /* ***** start ImprezaCasts  ***** */
-
-
+.imprezaCasts {
+  margin-bottom: 50px;
+  width: 100vw;
+  text-align: center;
+}
+.imprezaCasts h1{
+    margin-bottom: 20px;
+}
+.imprezaCasts .mainPage{
+    margin-top: 30px;
+    height: 70vh;
+}
 /* ***** END ImprezaCasts  ***** */
+
+
+
+@media (max-width:1200px) {
+  .creators .row {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+@media (max-width:992px) {
+  .Header {
+    margin-top: 0px;
+  }
+  .Header .landing {
+    gap: 20px;
+    height: 100vh;
+    margin-top: 80px;
+  }
+  ul li a{
+  font-size: 15px;
+}
+.headLanding .showing {
+  height: 40vh;
+  margin-top: 0;
+}
+.creators .row {
+  margin-left: 0px;
+  margin-right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+}
+
+
+@media (max-width:376px) {
+.headWord h1{
+  font-size: 25px;
+}
+.TypeAnimation {
+  font-size: 25px;
+}
+.Header .buttons .btn {
+  padding: 10px 15px;
+  font-size: 14px;
+}
+.creators .card p {
+  font-size: 13px;
+}
+.creators h4{
+  font-size: 20px;
+}
+.creators .card {
+  padding: 25px;
+}
+.headLanding .showing {
+  height: 100%;
+}
+.headLanding .showing .imges{
+  height: 100%;
+}
+.Build .head {
+  margin-bottom: 20px;
+}
+.Build .head h1 {
+  margin-bottom: 10px;
+}
+
+.headLanding .showing {
+  height: 40vh;
+  margin-top: 0;
+}
+}

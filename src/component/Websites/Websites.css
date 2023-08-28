@@ -1,0 +1,67 @@
+.Websites{
+    padding-top: 50px;
+    width: 100vw;
+    background-color: #333333;
+    color: white;
+    text-align: center;
+}
+.Websites .head {
+    margin: 50px 0;
+}
+.Websites .photo{
+    width: 100%;
+    padding: 0;
+    margin: 50px  0;
+}
+.Websites .photo .itemPhoto{
+    margin: 0;
+    padding: 5px;
+    min-width: calc(100% - 25px) /6;
+}
+.Websites .photo .itemPhoto img{
+    margin: 0 ;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.Websites .sections{
+width: 100vw;
+min-height: 350px;
+padding: 0;
+
+}
+.Websites .sections .basket{
+    padding: 60px;
+    margin: 0;
+    margin-bottom: 10px;
+    min-width: calc(100% / 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    }
+    .Websites .sections  .one{
+background-color: #444444;
+    }
+    .Websites .sections  .two{
+        background-color: #333333;
+            }
+            .Websites .sections  .three{
+                background-color: #222222;
+                    }
+    .Websites .sections  .btnn{
+        border: none;
+        padding: 10px 20px;
+        border-radius: 50px;
+        height: 50px;
+    }
+    @media (max-width:992px) {
+        .Websites .sections .basket .btnn{
+            font-size: 15px;
+        }        
+        .Websites .sections .basket{
+            padding: 20px;
+        }
+    }
