@@ -1,0 +1,46 @@
+.Footer{
+    max-height: 85vh;
+}
+.Footer .titleFooter{
+    text-align: center;
+    color:  #e95095;
+    margin: 80px 0;
+
+}
+.Footer  .fotterBack{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    gap: 20px;
+    background-image:linear-gradient(rgba(20, 20, 20, 0.85),rgba(21, 21, 22, 0.75)), url(../../images/Footer.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding : 80px 0;
+}
+.Footer  .fotterBack h1{
+    font-weight: 700;
+}
+.Footer  .btnBuy{
+    background-color:  #e95095;
+    color: #ffffff;
+    border-radius: 30px;
+    border: none;
+    padding: 20px 30px;
+    
+}
+.Footer .end {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Footer .end  p{
+    text-align: center;
+    margin: 0;
+    padding: 0 ;
+}

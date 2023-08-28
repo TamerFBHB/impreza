@@ -1,0 +1,48 @@
+.loveImpreza{
+    margin: 50px 0;
+    min-height: 100vh;
+    text-align: center;
+}
+.loveImpreza h1{
+    font-weight: 600;
+}
+.loveImpreza h5{
+    margin: 20px 0;
+}
+.loveImpreza .star{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    color: #ffc80a;
+    gap: 10px;
+}
+.loveImpreza .content{
+    margin: 20px 0;
+}
+.loveImpreza .content .puket{
+    padding: 20px;
+    text-align: start;
+}
+.loveImpreza .content .puket .comment{
+    position: relative;
+    background-color: #f5f5f5;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+.loveImpreza .content .puket .comment::after{
+position: absolute;
+content: "";
+bottom: -15px;
+left: 70px;
+width: 30px;
+height: 30px;
+transform:rotate(45deg) ;
+background-color: #f5f5f5;
+}
+.loveImpreza .content .puket .sign{
+    margin-left: 50px;
+    margin-top: 30px;
+}
+.loveImpreza .content .puket .sign p{
+    color: #999999;
+}

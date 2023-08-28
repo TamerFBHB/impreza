@@ -23,6 +23,7 @@ import { useEffect } from "react";
 import { useAnimation } from "framer-motion";
 import Websites from "../../component/Websites/Websites";
 import LoveImpreza from "../../component/LoveImpreza/LoveImpreza";
+import Footer from "../../component/Footer/Footer";
 
 const Home = () => {
 
@@ -333,6 +334,9 @@ const Home = () => {
       
       {/* ***** Love Impreza ***** */}
       <LoveImpreza />
+
+       {/* ***** Footer ***** */}
+            <Footer />
     </div>
   );
 };
