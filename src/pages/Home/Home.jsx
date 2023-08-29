@@ -32,7 +32,6 @@ const Home = () => {
   const { ref, inView } = useInView();
   const animation = useAnimation();
   useEffect(() => {
-    console.log("use effect hook , inView", inView);
     if (inView) {
       animation.start("moveShow");
     }
@@ -59,7 +58,7 @@ const Home = () => {
   // ***** show foto in build landing *****
     const [state , setstate] =useState(0)
   const slideShow = [
-     <video controls className="keyone" autoPlay="true" loop="true"  src={vedio}  type="video/mp4" ></video>,
+     <video controls className="imges" autoPlay="true" loop="true"  src={vedio}  type="video/mp4" ></video>,
      <img src={ show2} alt="" className="imges " />,
      <img src={ show3} alt="" className="imges " /> ,
      <img src={ show4} alt="" className="imges " />,

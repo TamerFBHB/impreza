@@ -29,8 +29,8 @@ const NavHeader = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ul">
-            <NavLink to="" className=" ">
+          <Nav className="AllLinks">
+            <NavLink to="" className="DemosLink">
               Demos
             </NavLink>
             <NavLink to="" className=" ">
@@ -48,8 +48,18 @@ const NavHeader = () => {
             <NavLink to="" className="">
               Blog
             </NavLink>
-            <NavLink to="" className="">
+            <NavLink to="" className="SupportLink">
               Support
+              <ul className="supportSub">
+                <li><NavLink>Changelog</NavLink></li>
+                <li><NavLink>Documentation</NavLink></li>
+                <li><NavLink>Support Forum</NavLink></li>
+                <div className="fot">
+                  <h6>Free Test Drive Before Purchase</h6>
+                  <button>Try Impreza For Free</button>
+                </div>
+              </ul>
+
             </NavLink>
             
           </Nav>

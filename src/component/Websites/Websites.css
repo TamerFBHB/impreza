@@ -11,7 +11,7 @@
 .Websites .photo{
     width: 100%;
     padding: 0;
-    margin: 50px  0;
+    margin-top: 50px ;
 }
 .Websites .photo .itemPhoto{
     margin: 0;
@@ -28,7 +28,7 @@
 width: 100vw;
 min-height: 350px;
 padding: 0;
-
+margin: 0;
 }
 .Websites .sections .basket{
     padding: 60px;

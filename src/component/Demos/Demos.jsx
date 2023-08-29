@@ -35,14 +35,13 @@ const { ref, inView } = useInView();
 const animation = useAnimation();
 
 useEffect(() => {
-  console.log("use effect hook , inView" , inView)
-  if(inView){animation.start("show" )}
+  if(inView){ animation.start("show")}
   if(!inView){ animation.start( "hidden")}
 },[animation,inView] );
 
 const parent = {
 hidden:{ opacity: 0},
-show : { opacity:1, transition : {when:"beforeChildren", staggerChildren:0.2}}
+show : { opacity:1, transition : { staggerChildren:0.2}}
 }
 const child = {
 hidden:{opacity : 0},
@@ -52,8 +51,8 @@ show : { opacity: 1, transition: {duration:0.3}}
   return (
     <section className="Demos">
       <div className="head">
-         <h1>Smart Pre-Built Demos</h1>
-       </div>
+          <h1>Smart Pre-Built Demos</h1>
+      </div>
       <Tabs
         defaultActiveKey="All"
         id="uncontrolled-tab-example"
