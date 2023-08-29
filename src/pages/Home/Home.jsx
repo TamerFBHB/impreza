@@ -9,7 +9,7 @@ import show2 from "../../images/2.jpg";
 import show3 from "../../images/3.jpg";
 import show4 from "../../images/4.jpg";
 import show5 from "../../images/5.jpg";
-import show6 from "../../images/6.jpg";
+import show6 from "../../images/06.jpg";
 import vedio from "../../video/11.mp4";
 import Beginner from "../../images/For_Beginner.png";
 import Creators from "../../images/For_Pro_Creators.png";
@@ -19,13 +19,14 @@ import ImprezaCasts from "../../component/ImprezaCasts/ImprezaCasts";
 import Demos from "../../component/Demos/Demos";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useAnimation } from "framer-motion";
 import Websites from "../../component/Websites/Websites";
 import LoveImpreza from "../../component/LoveImpreza/LoveImpreza";
 import Footer from "../../component/Footer/Footer";
 
 const Home = () => {
+ 
 
   // ***** animation for section Creators ****
   const { ref, inView } = useInView();
@@ -43,7 +44,7 @@ const Home = () => {
   const parent = {
     moveShow: {
       x: 0,
-      transition: { when: "beforeChildren", staggerChildren: 0.5 },
+      transition: { when: "beforeChildren" , staggerChildren: 0.3 },
     },
     moveHidd: { x: "-20px" },
   };
@@ -56,26 +57,16 @@ const Home = () => {
   };
   // ***** End animation for section Creators ****
   // ***** show foto in build landing *****
-  const slideShow = () => {
-    var slideShows = document.querySelectorAll(".imges");
-    var keys = document.querySelectorAll(".key");
+    const [state , setstate] =useState(0)
+  const slideShow = [
+     <video controls className="keyone" autoPlay="true" loop="true"  src={vedio}  type="video/mp4" ></video>,
+     <img src={ show2} alt="" className="imges " />,
+     <img src={ show3} alt="" className="imges " /> ,
+     <img src={ show4} alt="" className="imges " />,
+     <img src={ show5} alt="" className="imges " />,
+     <img src={ show6} alt="" className="imges " /> 
+  ]
 
-    keys.forEach((ele) => {
-      ele.addEventListener("click", (e) => {
-        keys.forEach((li) => {
-          li.classList.add("Noactivenow");
-          li.classList.remove("activenow");
-        });
-        e.currentTarget.classList.remove("Noactivenow");
-        e.currentTarget.classList.add("activenow");
-        slideShows.forEach((item) => {
-          item.style.display = "none";
-        });
-        document.querySelector(e.currentTarget.dataset.con).style.display =
-          "block";
-      });
-    });
-  };
   // *****END show foto in build landing *****
   return (
     <div className="mainProject">
@@ -172,54 +163,48 @@ const Home = () => {
                 <ul>
                   <li>
                     <NavLink
-                      className="key Noactivenow"
-                      data-con=".keyone"
-                      onClick={slideShow}
+                     className={state === 0 ? "activenow key " :" key Noactivenow"} 
+                     onClick={()=>{setstate(0)}}
                     >
                       Section Template
                     </NavLink>
                   </li>
                   <li>
                     <NavLink
-                      className="key Noactivenow"
-                      data-con=".keytwo"
-                      onClick={slideShow}
+                       className={state === 1 ? "activenow key " :" key Noactivenow"} 
+                       onClick={()=>{setstate(1)}}
                     >
                       Live Visual Builder
                     </NavLink>
                   </li>
                   <li>
                     <NavLink
-                      className="key Noactivenow"
-                      data-con=".keythree"
-                      onClick={slideShow}
+                       className={state === 2 ? "activenow key " :" key Noactivenow"} 
+                       onClick={()=>{setstate(2)}}
                     >
                       WpBakery+Builder
                     </NavLink>
                   </li>
                   <li>
                     <NavLink
-                      className="key Noactivenow"
-                      data-con=".keyfour"
-                      onClick={slideShow}
+                        className={state === 3 ? "activenow key " :" key Noactivenow"} 
+                        onClick={()=>{setstate(3)}}
                     >
                       Header Builder
                     </NavLink>
                   </li>
                   <li>
                     <NavLink
-                      className="key Noactivenow"
-                      data-con=".keyfive"
-                      onClick={slideShow}
+                       className={state === 4? "activenow key " :" key Noactivenow"} 
+                       onClick={()=>{setstate(4)}}
                     >
                       Grid Layout Builder
                     </NavLink>
                   </li>
                   <li>
                     <NavLink
-                      className="key Noactivenow"
-                      data-con=".keysex"
-                      onClick={slideShow}
+                       className={state === 5 ? "activenow key " :" key Noactivenow"} 
+                       onClick={()=>{setstate(5)}}
                     >
                       WooCommerce Builder
                     </NavLink>
@@ -228,20 +213,7 @@ const Home = () => {
               </div>
               <div className="col-md-12 col-lg-9 ">
                 <div className="showing">
-                  <video
-                    controls
-                    className="keyone"
-                    autoPlay="true"
-                    loop="true"
-                    src={vedio}
-                    type="video/mp4"
-                  ></video>
-
-                  <img src={show2} alt="" className="imges keytwo" />
-                  <img src={show3} alt="" className="imges keythree" />
-                  <img src={show4} alt="" className="imges keyfour" />
-                  <img src={show5} alt="" className="imges keyfive" />
-                  <img src={show6} alt="" className="imges keysex" />
+                {slideShow[state]}  {/****************************************************** */}
                 </div>
               </div>
             </Row>

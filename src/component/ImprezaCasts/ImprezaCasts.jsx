@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ImprezaCasts.css";
 import { Accordion, NavLink, Row } from "react-bootstrap";
 
 const ImprezaCasts = () => {
+
+  const [state , setstate] = useState(0)
   const youtube = [
     "https://www.youtube.com/embed/GLpv-9ZuEfM?si=SjZDGSFFBXO-bJY2",
     "https://www.youtube.com/embed/HiOEeNjn0As?si=rYqLxILP1tLgrFHJ",
@@ -32,25 +34,6 @@ const ImprezaCasts = () => {
   ];
   
 
-  const PlayYoutube = () => {
-    var keyyoutube = document.querySelectorAll(".unit");
-    var div = document.querySelector(".showyoutube");
-
-    keyyoutube.forEach((ele) => {
-      ele.addEventListener("click", (e) => {
-        keyyoutube.forEach((li) => {
-          li.classList.remove("activeyoutube");
-        });
-        e.currentTarget.classList.add("activeyoutube");
-        div.innerHTML = ` <iframe
-            width="100%"
-            height="100%"
-            src="${youtube[parseInt(e.currentTarget.dataset.com)]}"
-            className="item1 youtube "
-            ></iframe>`;
-      });
-    });
-  };
   return (
       <Row>
         <div className="col-md-12 col-lg-4  p-0">
@@ -61,19 +44,19 @@ const ImprezaCasts = () => {
                   Getting Started
                 </Accordion.Header>
                 <Accordion.Body>
-                  <NavLink className="unit" data-com="0" onClick={PlayYoutube}>
+                  <NavLink className={state===0? "activeyoutube unit" :"unit"}   onClick={() => setstate( 0)}>
                     <p> 1. Whats is Impreza </p>
                     <p> 3:56 </p>
                   </NavLink>
-                  <NavLink className="unit" data-com="1" onClick={PlayYoutube}>
+                  <NavLink className={state===1? "activeyoutube unit" :"unit"}   onClick={() => setstate( 1)}>
                     <p> 2. Testing the Themee </p>
                     <p> 4:29 </p>
                   </NavLink>
-                  <NavLink className="unit" data-com="2" onClick={PlayYoutube}>
+                  <NavLink className={state===2? "activeyoutube unit" :"unit"} onClick={() => setstate( 2)}>
                     <p> 3. Installing and Activating </p>
                     <p> 2:17 </p>
                   </NavLink>
-                  <NavLink className="unit" data-com="3" onClick={PlayYoutube}>
+                  <NavLink className={state===3? "activeyoutube unit" :"unit"}   onClick={() => setstate(3)}>
                     <p>4. Importing Demos and Separate Section </p>
                     <p> 3:14 </p>
                   </NavLink>
@@ -85,39 +68,39 @@ const ImprezaCasts = () => {
                   Adjusting Look and Feel
                 </Accordion.Header>
                 <Accordion.Body>
-                  <NavLink className="unit" data-com="4">
+                  <NavLink className={state===4? "activeyoutube unit" :"unit"} onClick={() => setstate(4)}>
                     <p> 5. Setting the Typography </p>
                     <p> 4:50 </p>
                   </NavLink>
-                  <NavLink className="unit" data-com="5">
+                  <NavLink className={state===5? "activeyoutube unit" :"unit"} onClick={() => setstate(5)}>
                     <p> 6. Adjusting Theme Colors </p>
                     <p> 3:20 </p>
                   </NavLink>
-                  <NavLink className="unit" data-com="6">
+                  <NavLink className={state===6? "activeyoutube unit" :"unit"} onClick={() => setstate(6)}>
                     <p> 7. Customizeing Headers </p>
                     <p> 4:04 </p>
                   </NavLink>
-                  <NavLink className="unit" data-com="7">
+                  <NavLink className={state===7? "activeyoutube unit" :"unit"} onClick={() => setstate(7)}>
                     <p> 8. Customizeing Footers </p>
                     <p>4:06 </p>
                   </NavLink>
-                  <NavLink className="unit" data-com="8">
+                  <NavLink className={state===8? "activeyoutube unit" :"unit"} onClick={() => setstate(8)}>
                     <p> 9. Creating Page Templates </p>
                     <p> 7:40 </p>
                   </NavLink>
-                  <NavLink className="unit" data-com="9">
+                  <NavLink className={state===9? "activeyoutube unit" :"unit"} onClick={() => setstate(9)}>
                     <p> 10. Customizeing Post Lists with the Grid Templates </p>
                     <p> 4:26</p>
                   </NavLink>
-                  <NavLink className="unit" data-com="10">
+                  <NavLink className={state===10? "activeyoutube unit" :"unit"} onClick={() => setstate(10)}>
                     <p> 11. Styling Buttons and Input Fields </p>
                     <p> 2:34 </p>
                   </NavLink>
-                  <NavLink className="unit" data-com="11">
+                  <NavLink className={state===11? "activeyoutube unit" :"unit"} onClick={() => setstate(11)}>
                     <p> 12. Adding Icons </p>
                     <p> 3:08 </p>
                   </NavLink>
-                  <NavLink className="unit" data-com="12">
+                  <NavLink className={state===12? "activeyoutube unit" :"unit"} onClick={() => setstate(12)}>
                     <p> 13. Adjusting Mobile Version </p>
                     <p> 2:34 </p>
                   </NavLink>
@@ -129,12 +112,12 @@ const ImprezaCasts = () => {
                   Content Editing
                 </Accordion.Header>
                 <Accordion.Body>
-                  <NavLink className="unit" data-com="13">
+                  <NavLink className={state===13? "activeyoutube unit" :"unit"} onClick={() => setstate(13)}>
                     <p> 14. Editing Pages with the Builder </p>
                     <p>5:39 </p>
                   </NavLink>
 
-                  <NavLink className="unit" data-com="14">
+                  <NavLink className={state===14? "activeyoutube unit" :"unit"} onClick={() => setstate(14)}>
                     <p>
                       {" "}
                       15. Organizing Content with Section,Row,According,and Tabs{" "}
@@ -142,16 +125,16 @@ const ImprezaCasts = () => {
                     <p>4:02 </p>
                   </NavLink>
 
-                  <NavLink className="unit" data-com="15">
+                  <NavLink className={state===15? "activeyoutube unit" :"unit"} onClick={() => setstate(15)}>
                     <p> 16. Building Pages with Section Template </p>
                     <p>5:39 </p>
                   </NavLink>
-                  <NavLink className="unit" data-com="16">
+                  <NavLink className={state===16? "activeyoutube unit" :"unit"} onClick={() => setstate(16)}>
                     <p> 17. Using Popups </p>
                     <p>3:05 </p>
                   </NavLink>
 
-                  <NavLink className="unit" data-com="17">
+                  <NavLink className={state===17? "activeyoutube unit" :"unit"} onClick={() => setstate(17)}>
                     <p> 18. Reusable Content Blocks </p>
                     <p>3:17 </p>
                   </NavLink>
@@ -163,22 +146,22 @@ const ImprezaCasts = () => {
                   Creating a shop
                 </Accordion.Header>
                 <Accordion.Body>
-                  <NavLink className="unit" data-com="18">
+                  <NavLink className={state===18? "activeyoutube unit" :"unit"} onClick={() => setstate(18)}>
                     <p> 19. Setting Up WooCommerce </p>
                     <p>5:09 </p>
                   </NavLink>
-                  <NavLink className="unit" data-com="19">
+                  <NavLink className={state===19? "activeyoutube unit" :"unit"} onClick={() => setstate(19)}>
                     <p> 20. Customizaing Product Page </p>
                     <p>7:16 </p>
                   </NavLink>
-                  <NavLink className="unit" data-com="20">
+                  <NavLink className={state===20? "activeyoutube unit" :"unit"} onClick={() => setstate(20)}>
                     <p>
                       {" "}
                       21. Customizaing Product Catalog with the Grid Template{" "}
                     </p>
                     <p>3:21 </p>
                   </NavLink>
-                  <NavLink className="unit" data-com="21">
+                  <NavLink className={state===21? "activeyoutube unit" :"unit"} onClick={() => setstate(21)}>
                     <p> 22. Customizing Cart,Checkout,and Thank You Pages </p>
                     <p>6:20 </p>
                   </NavLink>
@@ -190,16 +173,16 @@ const ImprezaCasts = () => {
                   Advanced Techniques
                 </Accordion.Header>
                 <Accordion.Body>
-                  <NavLink className="unit" data-com="22">
+                  <NavLink className={state===22? "activeyoutube unit" :"unit"} onClick={() => setstate(22)}>
                     <p> 23. Using Custom Field with ACF Pro </p>
                     <p>9:10 </p>
                   </NavLink>
 
-                  <NavLink className="unit" data-com="23">
+                  <NavLink className={state===23? "activeyoutube unit" :"unit"} onClick={() => setstate(23)}>
                     <p> 24. Optimizing Loading Preformance </p>
                     <p>4:24 </p>
                   </NavLink>
-                  <NavLink className="unit" data-com="24">
+                  <NavLink className={state===24? "activeyoutube unit" :"unit"} onClick={() => setstate(24)}>
                     <p> 25. Search Loading Performance </p>
                     <p>2:13 </p>
                   </NavLink>
@@ -216,7 +199,7 @@ const ImprezaCasts = () => {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/GLpv-9ZuEfM?si=SjZDGSFFBXO-bJY2"
+              src={`${youtube[state]}`}
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
