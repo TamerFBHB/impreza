@@ -8,7 +8,9 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { useAnimation } from "framer-motion"; 
 
-const Demos = () => {
+
+
+const Demos = ({demos , colorsetstate}) => {
 
   const sorting = [...Data].sort((a, b) => (a.title > b.title ? 1 : -1));
 
@@ -33,11 +35,10 @@ const Demos = () => {
 //  ***** to do animation *****
 const { ref, inView } = useInView();
 const animation = useAnimation();
-
 useEffect(() => {
-  if(inView){ animation.start("show")}
-  if(!inView){ animation.start( "hidden")}
-},[animation,inView] );
+  if(inView){ animation.start("show") ; colorsetstate("#E95095")}
+  if(!inView){ animation.start( "hidden"); colorsetstate("#222222")}
+},[animation,inView,colorsetstate] );
 
 const parent = {
 hidden:{ opacity: 0},
@@ -49,7 +50,7 @@ show : { opacity: 1, transition: {duration:0.3}}
 }
 
   return (
-    <section className="Demos">
+    <section className="Demos" ref ={demos} >
       <div className="head">
           <h1>Smart Pre-Built Demos</h1>
       </div>

@@ -19,7 +19,7 @@ import ImprezaCasts from "../../component/ImprezaCasts/ImprezaCasts";
 import Demos from "../../component/Demos/Demos";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useAnimation } from "framer-motion";
 import Websites from "../../component/Websites/Websites";
 import LoveImpreza from "../../component/LoveImpreza/LoveImpreza";
@@ -58,14 +58,20 @@ const Home = () => {
   // ***** show foto in build landing *****
     const [state , setstate] =useState(0)
   const slideShow = [
-     <video controls className="imges" autoPlay="true" loop="true"  src={vedio}  type="video/mp4" ></video>,
-     <img src={ show2} alt="" className="imges " />,
-     <img src={ show3} alt="" className="imges " /> ,
-     <img src={ show4} alt="" className="imges " />,
-     <img src={ show5} alt="" className="imges " />,
-     <img src={ show6} alt="" className="imges " /> 
+      <video controls className="imges" autoPlay="true" loop="true"  src={vedio}  type="video/mp4" ></video>,
+      <img src={ show2} alt="" className="imges " />,
+      <img src={ show3} alt="" className="imges " /> ,
+      <img src={ show4} alt="" className="imges " />,
+      <img src={ show5} alt="" className="imges " />,
+      <img src={ show6} alt="" className="imges " /> 
   ]
 
+  // **** demos ref ****
+  const demos = useRef()   
+  const [colorstate, colorsetstate ] = useState("")
+  const moveDemos = () => {
+    demos.current.scrollIntoView({ behavior: "smooth", block:"start" });
+  };
   // *****END show foto in build landing *****
   return (
     <div className="mainProject">
@@ -73,7 +79,7 @@ const Home = () => {
       <ScrollButton />
 
       {/* ***** nav Bar from component ***** */}
-      <NavHeader />
+      <NavHeader  moveDemos={moveDemos} colorstate={colorstate}/>
 
       {/* ***** landin home ***** */}
       <section className="Header">
@@ -212,7 +218,7 @@ const Home = () => {
               </div>
               <div className="col-md-12 col-lg-9 ">
                 <div className="showing">
-                {slideShow[state]}  {/****************************************************** */}
+                {slideShow[state]}  
                 </div>
               </div>
             </Row>
@@ -298,7 +304,7 @@ const Home = () => {
       </section>
 
       {/* ***** Demos ***** */}
-      <Demos />
+      <Demos demos ={demos} colorsetstate={colorsetstate}/>
 
       {/* ***** Websites ***** */}
       <Websites />

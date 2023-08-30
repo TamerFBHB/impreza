@@ -3,6 +3,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "./NavHeader.css";
 
+
 window.addEventListener("scroll", function() {
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
     document.getElementById("header").classList.add("move") ;
@@ -11,14 +12,7 @@ window.addEventListener("scroll", function() {
   }
 });
 
-const NavHeader = () => {
-  
-  // navigation to Home
-// const moveHome = () => {
-//   Home.current.scrollIntoView({ behavior: "smooth", block:"start" });
-// };
-  
-
+const NavHeader = ({moveDemos , colorstate}) => {   
   return (
     <Navbar expand="lg" id="header" className="navFixed">
       <Container>
@@ -30,7 +24,7 @@ const NavHeader = () => {
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="AllLinks">
-            <NavLink to="" className="DemosLink">
+            <NavLink to="" className="" style={{color:colorstate}} onClick={moveDemos}>
               Demos
             </NavLink>
             <NavLink to="" className=" ">
