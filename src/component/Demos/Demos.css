@@ -23,6 +23,7 @@
 
 
 .Demos .box{
+    opacity: 0;
     width:350px ;
     height: 300px;
     padding:10px  20px;

@@ -82,7 +82,9 @@
 .move{
     height: 60px;
 }
-
+.navbar-toggler{
+    z-index: 100;
+}
 @media (max-width:992px) {
     .navFixed {
         position: fixed;
@@ -90,4 +92,15 @@
         right: 0;
         left : 0;
     }
+    .navFixed .AllLinks .SupportLink .supportSub{
+        right: 10px;
+        width: 60%;
+    }
+    .navFixed .AllLinks .SupportLink .supportSub .fot h6{
+        font-size: 13px;
+    }
+    .navFixed .AllLinks .SupportLink .supportSub .fot button{
+        font-size: 13px;
+    }
+
 }

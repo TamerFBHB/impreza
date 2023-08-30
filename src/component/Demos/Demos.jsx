@@ -37,15 +37,15 @@ const { ref, inView } = useInView();
 const animation = useAnimation();
 useEffect(() => {
   if(inView){ animation.start("show") ; colorsetstate("#E95095")}
-  if(!inView){ animation.start( "hidden"); colorsetstate("#222222")}
+  if(!inView){colorsetstate("#222222")}
 },[animation,inView,colorsetstate] );
 
 const parent = {
-hidden:{ opacity: 0},
+// hidden:{ opacity: 0},
 show : { opacity:1, transition : { staggerChildren:0.2}}
 }
 const child = {
-hidden:{opacity : 0},
+// hidden:{opacity : 0},
 show : { opacity: 1, transition: {duration:0.3}}
 }
 
@@ -61,15 +61,16 @@ show : { opacity: 1, transition: {duration:0.3}}
       >
         <Tab eventKey="All" title="All">
           <motion.div ref = {ref}
-           variants  = {parent}
-           animate={animation}
+            variants  = {parent}
+            animate={animation}
+          
           className="mx-3 content row">
             {sorting.map((item) => {
               return (
                 <Link className="col-sm-12 col-md-6 col-lg-4 col-xl-3 ">
                   <motion.div
-                   variants  ={child} 
-                   className="box">
+                    variants  ={child} 
+                    className="box">
                     <div className="title">{item.title}</div>
                     <img src={item.image} alt="" />
                   </motion.div>

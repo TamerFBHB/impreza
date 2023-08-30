@@ -12,7 +12,7 @@ const Footer = () => {
           <button className="btnBuy">Buy Impreza for $59</button>
         </div>
         <div className="end">
-            <p>© I have redesigned this site using React + Bootstrap + Framer Motion - Tamer Fouad .. 2023 </p>
+            <p>© I have redesigned this site using React + Bootstrap .... Tamer Fouad / 2023 </p>
         </div>
       </section>
     </>

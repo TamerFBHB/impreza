@@ -24,6 +24,9 @@
 .Footer  .fotterBack h1{
     font-weight: 700;
 }
+.Footer  .fotterBack h6{
+    text-align: center;
+}
 .Footer  .btnBuy{
     background-color:  #e95095;
     color: #ffffff;
