@@ -120,7 +120,6 @@
   text-decoration: none;
   font-size: 18;
   font-weight: 600;
-
   transition: 0.5s;
 }
 .Build ul li:hover {
@@ -171,7 +170,7 @@
   margin-right: 150px;
 }
 .creators .card {
-  width: 250px;
+  width: calc(100% - 20px)/3;
   height: 400px;
   padding: 35px;
   border: none;
@@ -279,5 +278,8 @@
   margin: 80px 0;
   text-align: center;
   width: 100vw;
+}
+.Build ul li a{
+  padding: 2px;
 }
 }

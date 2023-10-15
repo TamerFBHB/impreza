@@ -37,7 +37,7 @@ const { ref, inView } = useInView();
 const animation = useAnimation();
 useEffect(() => {
   if(inView){ animation.start("show") ; colorsetstate("#E95095")}
-  if(!inView){colorsetstate("#222222")}
+  if(!inView){ colorsetstate("#222222")}
 },[animation,inView,colorsetstate] );
 
 const parent = {

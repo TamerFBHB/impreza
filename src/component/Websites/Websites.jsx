@@ -23,30 +23,30 @@ const Websites = () => {
           <h5>Manually picked from public support requests of our Clients.</h5>
         </div>
         <div className="photo row ">
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg1} alt=""  /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg2} alt=""  /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg3} alt=""  /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg4} alt=""  /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg5} alt=""  /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg6} alt=""  /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg7} alt=""  /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg8} alt=""  /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg9} alt=""  /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg10} alt="" /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg11} alt="" /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg12} alt="" /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg1} alt=""  /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg2} alt=""  /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg3} alt=""  /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg4} alt=""  /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg5} alt=""  /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg6} alt=""  /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg7} alt=""  /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg8} alt=""  /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg9} alt=""  /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg10} alt="" /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg11} alt="" /></div>
-           <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg12} alt="" /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg1} alt=""  /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg2} alt=""  /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg3} alt=""  /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg4} alt=""  /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg5} alt=""  /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg6} alt=""  /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg7} alt=""  /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg8} alt=""  /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg9} alt=""  /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg10} alt="" /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg11} alt="" /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg12} alt="" /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg1} alt=""  /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg2} alt=""  /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg3} alt=""  /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg4} alt=""  /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg5} alt=""  /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg6} alt=""  /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg7} alt=""  /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg8} alt=""  /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg9} alt=""  /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg10} alt="" /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg11} alt="" /></div>
+            <div className="itemPhoto col-sm-6 col-md-4 col-lg-2"> <img src={pg12} alt="" /></div>
         </div>
 <div className="sections row">
     <div className="basket one col-md-12  col-lg-4">
