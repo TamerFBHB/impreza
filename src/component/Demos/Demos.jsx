@@ -3,10 +3,6 @@ import "./Demos.css";
 import { Row, Tab, Tabs } from "react-bootstrap";
 import Data from "./data";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
-import { useAnimation } from "framer-motion"; 
 
 
 
@@ -24,7 +20,7 @@ const Demos = ({demos , colorsetstate}) => {
     return ele.id === "One" || ele.id2 === "One";
   });
   const other = sorting.filter((ele) => {
-    return ele.id2 === "Other";
+    return ele.id2 === "other";
   });
   const portfolio = sorting.filter((ele) => {
     return ele.id3 === "portfolio";
@@ -32,22 +28,7 @@ const Demos = ({demos , colorsetstate}) => {
   const shop = sorting.filter((ele) => {
     return ele.id4 === "shop";
   });
-//  ***** to do animation *****
-const { ref, inView } = useInView();
-const animation = useAnimation();
-useEffect(() => {
-  if(inView){ animation.start("show") ; colorsetstate("#E95095")}
-  if(!inView){ colorsetstate("#222222")}
-},[animation,inView,colorsetstate] );
 
-const parent = {
-// hidden:{ opacity: 0},
-show : { opacity:1, transition : { staggerChildren:0.2}}
-}
-const child = {
-// hidden:{opacity : 0},
-show : { opacity: 1, transition: {duration:0.3}}
-}
 
   return (
     <section className="Demos" ref ={demos} >
@@ -60,66 +41,48 @@ show : { opacity: 1, transition: {duration:0.3}}
         className="mb-3"
       >
         <Tab eventKey="All" title="All">
-          <motion.div ref = {ref}
-            variants  = {parent}
-            animate={animation}
-          
-          className="mx-3 content row">
+          <div className="mx-3 content row">
             {sorting.map((item) => {
               return (
-                <Link className="col-sm-12 col-md-6 col-lg-4 col-xl-3 ">
-                  <motion.div
-                    variants  ={child} 
-                    className="box">
-                    <div className="title">{item.title}</div>
-                    <img src={item.image} alt="" />
-                  </motion.div>
-                </Link>
+                <Link className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                <div className="box">
+                  <div className="title">{item.title}</div>
+                  <img src={item.image} alt="" />
+                </div>
+              </Link>
               );
             })}
-          </motion.div>
+          </div>
         </Tab>
 
         <Tab eventKey="Blog" title="Blog 6">
-          <motion.div 
-            variants  = {parent}
-            animate="show"
-            initial ="hidden"
-            className="mx-3 content row">
+          <div   className="mx-3 content row">
             {blog.map((item) => {
               return (
                 <Link className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                  <motion.div
-                    variants  ={child} 
-                    className="box">
+                  <div className="box">
                     <div className="title">{item.title}</div>
                     <img src={item.image} alt="" />
-                  </motion.div>
+                  </div>
                 </Link>
               );
             })}
-          </motion.div>
+          </div>
         </Tab>
 
         <Tab eventKey="Business" title="Business 30">
-          <motion.div
-            variants  = {parent}
-            animate="show"
-            initial ="hidden"
-          className="mx-3 content row">
+          <div className="mx-3 content row">
             {Business.map((item) => {
               return (
                 <Link className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                  <motion.div
-                  variants={child}
-                  className="box">
-                    <div className="title">{item.title}</div>
-                    <img src={item.image} alt="" />
-                  </motion.div>
-                </Link>
+                <div className="box">
+                  <div className="title">{item.title}</div>
+                  <img src={item.image} alt="" />
+                </div>
+              </Link>
               );
             })}
-          </motion.div>
+          </div>
         </Tab>
 
         <Tab eventKey="OnePage" title="One Page 11">

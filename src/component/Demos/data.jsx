@@ -99,17 +99,17 @@ const Data = [
         image : architects_studio,
     },
     {
-        id2:"Other",
+        id2:"other",
         title:"School",
         image : school,
     },
     {
-        id2:"Other",
+        id2:"other",
         title:"Church",
         image : Church,
     },
     {
-        id2:"Other",
+        id2:"other",
         title:"Government",
         image : Government,
     },
@@ -209,19 +209,19 @@ const Data = [
     },
     {
         id:"Business",
-        id2:"Other",
+        id2:"other",
         title:"Medical Clinic",
         image : medical_clinic,
     },
     {
         id:"Business",
-        id2:"Other",
+        id2:"other",
         title:"Car Rental",
         image : car_rental,
     },
     {
         id:"Business",
-        id2:"Other",
+        id2:"other",
         title:"Pr Agency",
         image : pr_agency,
     },
@@ -233,7 +233,7 @@ const Data = [
     },
     {
         id:"Business",
-        id2:"Other",
+        id2:"other",
         title:"Auto Mechanic",
         image : auto_mechanic,
     },
@@ -261,7 +261,7 @@ const Data = [
     },
     {
         id:"Business",
-        id2:"Other",
+        id2:"other",
         title:"Spa Salon",
         image : spa_salon,
     },
@@ -278,7 +278,7 @@ const Data = [
     },
     {
         id:"One",
-        id2:"Other" ,
+        id2:"other" ,
         title:"Books Writer",
         image : books_writer,
     },
@@ -289,7 +289,7 @@ const Data = [
     },
     {
         id:"One",
-        id2:"Other",
+        id2:"other",
         title:"Single Course",
         image : Single_Course,
     },
@@ -313,7 +313,7 @@ const Data = [
     },
     {
         id:"Business",
-        id2:"Other",
+        id2:"other",
         title:"Exhibition",
         image : Exhibition,
     },
@@ -346,13 +346,13 @@ const Data = [
     },
     {
         id:"Business",
-        id2:"Other",
+        id2:"other",
         title:"Charity",
         image : Charity,
     },
     {
         id:"Blog",
-        id2:"Other",
+        id2:"other",
         title:"Music Band",
         image : music_band,
     },
@@ -363,7 +363,7 @@ const Data = [
     },
     {
         id:"Business",
-        id2:"Other",
+        id2:"other",
         title:"Nonprofit Organization",
         image : Nonprofit_Organization,
     },
